@@ -10,18 +10,18 @@ class App extends Component {
     return (
       <div>
         <div className="jumbotron">
-        <h1 className="display-4">adVocation</h1>
-        {/* <p className="lead">Created with love</p> */}
+        <h1 className="display-4" className="text-center">adVocation</h1>
         <hr className="my-4"/>
-        <p>Help make your worplace more diverse and inclusive by expanding hiring pools!</p>
+        <p className="text-center">Help make your worplace more diverse and inclusive by expanding hiring pools!</p>
         <p className="lead">
-        {/* <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a> */}
         </p>
         </div>
         <Container>
           <Row>
-            <Col>I want to refer!</Col>
-            <Col>I need a job!</Col>
+            <Col>
+            <p className="text-center">I want to promote diversity!</p>
+            </Col>
+            <Col><p className="text-center">I need a job!</p></Col>
           </Row>
         </Container>
       </div>
