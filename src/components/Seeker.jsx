@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom
 import CompanyList from './CompanyList.jsx';
 import Search from './Search.jsx'
 import SeekerProfile from './SeekerProfile.jsx'
+import JobList from './JobList.jsx';
 
 class Seeker extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class Seeker extends React.Component {
     this.state = {
       name: 'Alice',
       referredCompanies: ['IBM', 'Google', 'Apple'],
-      pendingCompanies: []
+      pendingCompanies: [],
+      allJobs: ['job1', 'job2', 'job3']
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -32,7 +34,9 @@ class Seeker extends React.Component {
           referredCompanies={this.state.referredCompanies}
           pendingCompanies={this.state.pendingCompanies}
         />
-        <Search onClick={this.handleClick} />
+        <Search
+          onClick={this.handleClick}
+        />
         <SeekerProfile />
       </React.Fragment>
     )
