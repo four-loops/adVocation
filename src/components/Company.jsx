@@ -1,8 +1,11 @@
 import React from 'react';
+import { ListGroup } from 'react-bootstrap';
 
 const Company = (props) => {
   return (
-    <li className="list-group-item">{props.companyName}</li>
+    <ListGroup.Item>
+      {props.companyName}
+    </ListGroup.Item>
   );
 };
 
