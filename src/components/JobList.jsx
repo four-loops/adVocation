@@ -4,13 +4,16 @@ import AvailableJob from './AvailableJob.jsx';
 
 const JobList = (props) => {
   return (
-    <ListGroup>
-      {props.jobs.map((job) => {
+    <React.Fragment>
+      <h3>Available Jobs</h3>
+      <ListGroup>
+        {props.location.props.jobs.map((job) => {
           return (
             <AvailableJob jobName={job} />
           );
         })}
-    </ListGroup>
+      </ListGroup>
+    </React.Fragment>
   );
 };
 

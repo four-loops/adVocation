@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom
 import CompanyList from './CompanyList.jsx';
 import Search from './Search.jsx'
 import SeekerProfile from './SeekerProfile.jsx'
-import JobList from './JobList.jsx';
 
 class Seeker extends React.Component {
   constructor(props) {
@@ -14,12 +13,6 @@ class Seeker extends React.Component {
       pendingCompanies: [],
       allJobs: ['job1', 'job2', 'job3']
     };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    console.log('click');
   }
 
   render() {
@@ -35,7 +28,7 @@ class Seeker extends React.Component {
           pendingCompanies={this.state.pendingCompanies}
         />
         <Search
-          onClick={this.handleClick}
+          jobs={this.state.allJobs}
         />
         <SeekerProfile />
       </React.Fragment>
