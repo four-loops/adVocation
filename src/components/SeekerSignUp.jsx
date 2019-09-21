@@ -18,7 +18,7 @@ const SeekerSignUp = (props) => {
         <Form.Label>Email Address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          Your e-mail address may be seen by your referrer and by potential employers.
         </Form.Text>
       </Form.Group>
 
@@ -32,14 +32,25 @@ const SeekerSignUp = (props) => {
         <Form.Control type="linkedin_url" placeholder="https://www.linkedin.com/in/yourprofilehere" />
       </Form.Group>
 
-      <Form.Group controlId="hr_contact">
-        <Form.Label>Where do we e-mail your referrals?</Form.Label>
-        <Form.Control type="hr_contact" placeholder="E-mail address of your company's HR team" />
+      <Form.Group controlId="job_position">
+        <Form.Label>Which title best suits the type of job you are seeking?</Form.Label>
+        <Form.Control as="select">
+          <option>Software Engineer</option>
+          <option>Graphic Designer</option>
+          <option>Network Security Analyst</option>
+          <option>Social Media Specialist</option>
+          <option>Finance Manager</option>
+        </Form.Control>
       </Form.Group>
 
-      <Form.Group controlId="seeker_see_name">
-        <Form.Label>Are you willing to share your name with those you refer?</Form.Label>
-        <Form.Check type="checkbox" label="Check here if the people who you refer can mention you by name when they follow-up on job leads" />
+      <Form.Group controlId="level_of_experience">
+        <Form.Label>How many years of experience do you have in this field?</Form.Label>
+        <Form.Control type="level_of_experience" placeholder="Enter years of experience" />
+      </Form.Group>
+
+      <Form.Group controlId="job_search_location">
+        <Form.Label>In what city are you looking for employment?</Form.Label>
+        <Form.Control type="level_of_experience" placeholder="Enter City" />
       </Form.Group>
 
       <Button variant="primary" type="submit">
@@ -49,3 +60,5 @@ const SeekerSignUp = (props) => {
       
     );
   };
+
+  export default SeekerSignUp;

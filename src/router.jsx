@@ -29,7 +29,7 @@ function RouteManager() {
             <Link to="/GiverSignUp">Giver Sign Up Form</Link>
           </li>
           <li>
-            <Link to="/SeekerSignUp">Giver Sign Up Form</Link>
+            <Link to="/SeekerSignUp">Seeker Sign Up Form</Link>
           </li>
         </ul>
       </div>
