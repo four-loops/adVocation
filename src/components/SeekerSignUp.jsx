@@ -1,8 +1,7 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button} from 'react-bootstrap';
 
-
-const GiverSignUp = (props) => {
+const SeekerSignUp = (props) => {
     return (
       <Form>
       
@@ -50,5 +49,3 @@ const GiverSignUp = (props) => {
       
     );
   };
-
-  export default GiverSignUp;
