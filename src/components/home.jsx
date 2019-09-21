@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Jumbotron } from 'react-bootstrap';
 
 class Home extends Component {
   constructor(props) {
@@ -9,13 +9,13 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="jumbotron">
+        <Jumbotron>
         <h1 className="display-4" className="text-center">adVocation</h1>
         <hr className="my-4"/>
         <p className="text-center">Help make your worplace more diverse and inclusive by expanding hiring pools!</p>
         <p className="lead">
         </p>
-        </div>
+        </Jumbotron>
         <Container>
           <Row>
             <Col>
