@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 class Home extends Component {
   constructor(props) {
@@ -19,22 +19,26 @@ class Home extends Component {
         <Container>
           <Row>
             <Col>
+              <Button>
               <Card bg="success" text="white" >
                 <Card.Body>
-                  <Card.Title><p className="text-center">I want to help promote diversity at my company!</p></Card.Title>
+                  <Card.Title><p className="text-center">I want to promote diversity at my company!</p></Card.Title>
                   <Card.Text>
                 </Card.Text>
                 </Card.Body>
               </Card>
+              </Button>
             </Col>
             <Col>
-            <Card bg="danger" text="white" >
+              <Button>
+              <Card bg="danger" text="white" >
                 <Card.Body>
                   <Card.Title><p className="text-center">I'd like a job at a company that values inclusion!</p></Card.Title>
                   <Card.Text>
                 </Card.Text>
                 </Card.Body>
               </Card>
+              </Button>
             </Col>
           </Row>
         </Container>
