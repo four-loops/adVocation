@@ -5,7 +5,7 @@ import Company from './Company.jsx'
 const CompanyList = (props) => {
   return (
     <Jumbotron>
-      <h2>Here's where you've been referred!</h2>
+      <h3>Here's where you've been referred!</h3>
       <ListGroup>
         {props.referredCompanies.map((company) => {
           return (

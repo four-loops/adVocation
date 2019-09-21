@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 
 const Search = (props) => {
   return (
-    <Button variant="primary" size="lg" block>
+    <Button variant="primary" size="lg" block onClick={props.onClick}>
       Search Jobs
     </Button>
   );
