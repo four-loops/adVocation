@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {};
@@ -29,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
