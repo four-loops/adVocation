@@ -1,5 +1,6 @@
 import React from 'react';
 import CompanyList from './CompanyList.jsx';
+import Search from './Search.jsx'
 
 class Seeker extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class Seeker extends React.Component {
           referredCompanies={this.state.referredCompanies}
           pendingCompanies={this.state.pendingCompanies}
         />
+        <Search />
       </React.Fragment>
     )
   }
