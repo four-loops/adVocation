@@ -4,6 +4,7 @@ import Home from './components/Home.jsx'
 import ViewCandidates from './components/CandidateList.jsx';
 import Seeker from './components/Seeker.jsx';
 import GiverLanding from './components/GiverLanding.jsx';
+import JobList from './components/JobList.jsx';
 
 function RouteManager() {
   return (
@@ -13,6 +14,8 @@ function RouteManager() {
         <Route path="/ViewCandidates" component={ViewCandidates} />
         <Route path="/Seeker" component={Seeker} />
         <Route path="/GiverLanding" component={GiverLanding} />
+        <Route path="/seeker" component={Seeker} />
+        <Route path="/jobs" component={JobList} />
         <ul>
           <li>
             <Link to="/">Home</Link>
