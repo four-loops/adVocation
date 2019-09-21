@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -9,15 +10,20 @@ class App extends Component {
     return (
       <div>
         <div className="jumbotron">
-        <h1 class="display-4">Amazing React, Bootstrap and Webpack</h1>
-        <p class="lead">Created with love</p>
-        <hr class="my-4"/>
-        <p>It uses utility classes for typography and spacing to space content out
-        within the larger container.</p>
-        <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <h1 className="display-4">adVocation</h1>
+        {/* <p className="lead">Created with love</p> */}
+        <hr className="my-4"/>
+        <p>Help make your worplace more diverse and inclusive by expanding hiring pools!</p>
+        <p className="lead">
+        {/* <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a> */}
         </p>
         </div>
+        <Container>
+          <Row>
+            <Col>I want to refer!</Col>
+            <Col>I need a job!</Col>
+          </Row>
+        </Container>
       </div>
     )
   }
