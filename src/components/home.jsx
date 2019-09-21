@@ -21,10 +21,11 @@ class Home extends Component {
             <Col>
               <Button variant="outline-light">
               <Card bg="success" text="white" >
+              <Card.Header><p text="white" className="text-center">I want to promote diversity at my company!</p></Card.Header>
                 <Card.Body>
-                  <Card.Title><p text="white" className="text-center">I want to help promote diversity at my company!</p></Card.Title>
-                  <Card.Text>
-                </Card.Text>
+                  <Card.Title></Card.Title>
+                  <Card.Text>sign up</Card.Text>
+                  <Card.Text></Card.Text>
                 </Card.Body>
               </Card>
               </Button>
@@ -32,8 +33,10 @@ class Home extends Component {
             <Col>
               <Button variant="outline-light">
               <Card bg="info" text="white" >
+              <Card.Header><p text="white" className="text-center">I'd like a job at a company that values inclusion!</p></Card.Header>
                 <Card.Body>
-                  <Card.Title><p text="white" className="text-center">I'd like a job at a company that values inclusion!</p></Card.Title>
+                  <Card.Title></Card.Title>
+                  <Card.Text>sign up</Card.Text>
                   <Card.Text>
                 </Card.Text>
                 </Card.Body>
@@ -41,6 +44,11 @@ class Home extends Component {
               </Button>
             </Col>
           </Row>
+          <Row>
+            <Col>already a user? job referrers log in here</Col>
+            <Col>already a user? job seekers log in here</Col>
+          </Row>
+
         </Container>
       </div>
     )
