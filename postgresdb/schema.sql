@@ -9,14 +9,14 @@ DROP TABLE IF EXISTS referals CASCADE;
 CREATE TABLE companies(
   company_id SERIAL PRIMARY KEY,
   name VARCHAR (50),
-  hr_contact VARCHAR (20),
-  company_headquarters VARCHAR (30)
+  hr_contact VARCHAR (20)
 );
 
 CREATE TABLE job_givers(
   job_giver_id SERIAL PRIMARY KEY,
   name VARCHAR (50),
   profile_url TEXT,
+  linkedin_url TEXT,
   email VARCHAR (50),
   company_id INTEGER REFERENCES companies,
   seeker_see_name BOOLEAN
