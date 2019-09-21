@@ -1,0 +1,52 @@
+.identifier {
+  background-color: cadetblue;
+  border: 2px solid black;
+}
+
+.candidateList_body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.candidateList_CardDeck {
+  padding-top: 20px;
+  /* display: flex;
+  flex-direction: row; */
+  /* white-space: nowrap; */
+  overflow: auto;
+  /* width: 1000px; */
+  display: grid;
+  grid-gap: 300px;
+  grid-template-columns: repeat(100, 10px);
+  grid-template-rows: minmax(150px, 1fr);
+}
+
+.candidateList_CardDeck::before,
+.candidateList_CardDeck::after {
+  content: ‘’;
+}
+
+.candidateList_Card {
+  margin: auto 20px;
+  width: 300px;
+  height: 550px;
+}
+
+.candidateList_CardBody {
+  max-width: 200px;
+}
+
+.candidateList_ButtonHolder {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidateList_Button {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.candidateList_Shortlist {
+  margin-top: 10px;
+}
