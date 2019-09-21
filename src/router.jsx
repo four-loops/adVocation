@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './components/Home.jsx'
 import ViewCandidates from './components/CandidateList.jsx';
 import Seeker from './components/Seeker.jsx';
+import JobList from './components/JobList.jsx';
 
 function RouteManager() {
   return (
@@ -10,7 +11,8 @@ function RouteManager() {
       <div>
         <Route exact path="/" component={Home} />
         <Route path="/ViewCandidates" component={ViewCandidates} />
-        <Route path="/Seeker" component={Seeker} />
+        <Route path="/seeker" component={Seeker} />
+        <Route path="/jobs" component={JobList} />
         <ul>
           <li>
             <Link to="/">Home</Link>
