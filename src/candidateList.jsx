@@ -12,12 +12,10 @@ class ViewCandidates extends React.Component {
 
   render() {
     return(
-      <div>this is React!</div>
+      <div>this is Candidate View!</div>
     )
   }
 }
 
 export default ViewCandidates;
-
-//ReactDOM.render(<ViewCandidates />, document.getElementById('candidate-list'))
 
