@@ -53,4 +53,23 @@
 
 #giverLanding_Body {
   padding: 10px;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.giverLanding_ListContainer {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.giverLanding_ButtonHolder {
+  display: flex;
+  flex-direction: row;
+}
+
+.giverLanding_Button {
+  margin: 10px auto;
+  width: 150px;
 }
