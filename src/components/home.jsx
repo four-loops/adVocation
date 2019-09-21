@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Redirect, NavLink} from "react-router-dom";
+import { BrowserRouter as Redirect, NavLink } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Jumbotron } from 'react-bootstrap';
 import GiverSignUp from './GiverSignUp.jsx';
 
