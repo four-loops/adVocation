@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -19,9 +19,23 @@ class App extends Component {
         <Container>
           <Row>
             <Col>
-            <p className="text-center">I want to promote diversity!</p>
+              <Card bg="success" text="white" >
+                <Card.Body>
+                  <Card.Title><p className="text-center">I want to help promote diversity at my company!</p></Card.Title>
+                  <Card.Text>
+                </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
-            <Col><p className="text-center">I need a job!</p></Col>
+            <Col>
+            <Card bg="danger" text="white" >
+                <Card.Body>
+                  <Card.Title><p className="text-center">I'd like a job at a company that values inclusion!</p></Card.Title>
+                  <Card.Text>
+                </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </div>
@@ -30,3 +44,4 @@ class App extends Component {
 }
 
 export default App;
+
