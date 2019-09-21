@@ -18,7 +18,7 @@ const SeekerSignUp = (props) => {
         <Form.Label>Email Address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
         <Form.Text className="text-muted">
-          Your e-mail address may be seen by your referrer and by potential employers.
+          Your e-mail address may be seen by your referrers and by potential employers.
         </Form.Text>
       </Form.Group>
 
@@ -51,6 +51,24 @@ const SeekerSignUp = (props) => {
       <Form.Group controlId="job_search_location">
         <Form.Label>In what city are you looking for employment?</Form.Label>
         <Form.Control type="level_of_experience" placeholder="Enter City" />
+      </Form.Group>
+
+      <p className="text-center">Craft three selling points that help will convince potential referrers to endorse you.</p>
+      <p className="text-center">You only have 300 characters for each field.</p>
+
+      <Form.Group controlId="selling_point_1">
+        <Form.Label></Form.Label>
+        <Form.Control maxLength="300" type="selling_point_1" placeholder="First Selling Point" />
+      </Form.Group>
+
+      <Form.Group controlId="selling_point_2">
+        <Form.Label></Form.Label>
+        <Form.Control maxLength="300" type="selling_point_2" placeholder="Second Selling Point" />
+      </Form.Group>
+
+      <Form.Group controlId="selling_point_3">
+        <Form.Label></Form.Label>
+        <Form.Control maxLength="300" type="selling_point_3" placeholder="Third Selling Point" />
       </Form.Group>
 
       <Button variant="primary" type="submit">
