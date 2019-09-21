@@ -1,0 +1,8 @@
+.identifier {
+  background-color: cadetblue;
+  border: 2px solid black;
+}
+
+.candidateList_body {
+  padding: 10px;
+}
