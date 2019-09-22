@@ -8,8 +8,8 @@ DROP TABLE IF EXISTS referals CASCADE;
 
 CREATE TABLE companies(
   company_id SERIAL PRIMARY KEY,
-  name VARCHAR (50),
-  hr_contact VARCHAR (20)
+  company_name VARCHAR (50),
+  hr_contact VARCHAR (50)
 );
 
 CREATE TABLE job_givers(
@@ -32,13 +32,14 @@ CREATE TABLE job_seekers(
 	industry VARCHAR (30),
 	level_of_experience SMALLINT,
 	location VARCHAR (30),
-	health_benifits BOOLEAN,
+	health_benefits BOOLEAN,
 	pto_unlimited BOOLEAN,
 	diverse_workplace BOOLEAN,
 	diversity_advocate BOOLEAN,
 	size VARCHAR (10),
 	job_search_location VARCHAR (20) [],
-	matching_401k BOOLEAN
+	matching_401k BOOLEAN,
+	seeker_job_title VARCHAR (50)
 );
 
 CREATE TABLE jobs(
