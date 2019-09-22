@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import { ListGroup, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import AvailableJob from './AvailableJob.jsx';
@@ -89,6 +90,9 @@ class JobList extends React.Component {
               );
             })}
           </ListGroup>
+          <NavLink to='/seeker'>
+            <Button>Back</Button> 
+          </NavLink>
         </React.Fragment>
       )
     );
