@@ -1,33 +1,50 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Redirect, NavLink } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Jumbotron, Alert } from 'react-bootstrap';
-import GiverSignUp from './GiverSignUp.jsx';
 
 
 class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pledge: true
+      diversityPledge: false,
+      seeker_see_name: false
     }; 
     this.submitGiverFormData = this.submitGiverFormData.bind(this);
+    this.handleDiversityCheckboxChange = this.handleDiversityCheckboxChange.bind(this);
+    this.handleEmailShareCheckboxChange = this.handleEmailShareCheckboxChange.bind(this);
+  }
+
+  handleDiversityCheckboxChange() {
+    let isChecked = this.state.diversityPledge;
+    this.setState({
+      diversityPledge: !isChecked
+    }, console.log(this.state.diversityPledge))
+  }
+
+  handleEmailShareCheckboxChange() {
+    let isChecked = this.state.seeker_see_name;
+    this.setState({
+      seeker_see_name: !isChecked
+    }, console.log(this.state.seeker_see_name))
   }
 
   verifyPledgeAgreement(){
-    if (this.state.pledge === false) {
-      
-
+    if (this.state.diversityPledge === false) {
+      // return (
+      //   <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+      //     <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+      //     <p>
+      //       This app is designed for people who support inclusion in the workplace!
+      //     </p>
+      //   </Alert>
+      // );
     }
   }
 
   submitGiverFormData(event){
     event.preventDefault();
     let form = event.target
-    if (form.elements.diversityPledge.value === 'off') {
-      this.setState({
-        pledge: false
-      })
-    }
     this.verifyPledgeAgreement();
     let formData = {
       name: form.elements.name.value,
@@ -59,6 +76,8 @@ class Home extends Component {
                 pathname: '/GiverSignUp',
                 props: {
                   submitGiverFormData: this.submitGiverFormData,
+                  handleDiversityCheckboxChange: this.handleDiversityCheckboxChange,
+                  handleEmailShareCheckboxChange: this.handleEmailShareCheckboxChange
                 }
               }}>
               <Button variant="outline-light">
