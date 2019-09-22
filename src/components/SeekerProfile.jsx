@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 
 class SeekerProfile extends React.Component {
@@ -37,7 +38,9 @@ class SeekerProfile extends React.Component {
           <p>Location: {this.state.location}</p>
         </div>
         <Button>Edit Profile</Button>
-        <Button>Back</Button>
+        <NavLink to='/seeker'>
+          <Button>Back</Button>
+        </NavLink>
       </React.Fragment>
     );
   }
