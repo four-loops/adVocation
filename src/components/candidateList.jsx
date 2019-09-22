@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { CardDeck, Card, Button } from 'react-bootstrap';
+import Octicon, {iconsByName} from '@primer/octicons-react'
+import { NavLink } from "react-router-dom";
 
 class ViewCandidates extends React.Component {
 
@@ -44,8 +46,14 @@ class ViewCandidates extends React.Component {
           }
         </div>
 
-        <div className='candidateList_ButtonHolder candidateList_Shortlist'>
-          <Button className='candidateList_Button'>View Shortlist</Button>
+        <div className='candidateList_BottomButtonHolder'>
+          <NavLink to='/GiverLanding'>
+            <Button className='candidateList_BottomButton'>
+              <Octicon icon={iconsByName['arrow-left']}/>
+              Openings
+            </Button>
+          </NavLink>
+          <Button className='candidateList_BottomButton'>View Shortlist</Button>
         </div>
         
       </div>
