@@ -4,7 +4,6 @@ import { Jumbotron, ListGroup } from 'react-bootstrap';
 import Company from './Company.jsx'
 
 const CompanyList = (props) => {
-  console.log(props.referredCompanies)
   return (
     <Jumbotron>
       <h3>Here's where you've been referred!</h3>
@@ -20,6 +19,7 @@ const CompanyList = (props) => {
             {props.referredCompanies.map((company) => {
               return (
                 <Company
+                  key={company.job_id}
                   company={company}
                   renderJobView={props.renderJobView}
                   renderJob={props.renderJob}
@@ -33,6 +33,7 @@ const CompanyList = (props) => {
               {props.referredCompanies.map((company) => {
                 return (
                   <Company
+                    key={company.job_id}
                     company={company}
                     renderJobView={props.renderJobView}
                     renderJob={props.renderJob}
@@ -47,6 +48,7 @@ const CompanyList = (props) => {
               {props.referredCompanies.slice(0, 5).map((company) => {
                 return (
                   <Company
+                    key={company.job_id}
                     company={company}
                     renderJobView={props.renderJobView}
                     renderJob={props.renderJob}

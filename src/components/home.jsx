@@ -80,7 +80,9 @@ class Home extends Component {
               }}>
                 <Button className='home_SignUpButton'>Sign Up</Button>
               </NavLink>
-              <Button className='home_SignUpButton'>Log In</Button>
+              <NavLink to='/GiverLanding'>
+                <Button className='home_SignUpButton'>Log In</Button>
+              </NavLink>
             </div>
           </div>
 
@@ -90,7 +92,7 @@ class Home extends Component {
               <NavLink to='/SeekerSignUp'>
                 <Button className='home_SignUpButton' variant='info'>Sign Up</Button>
               </NavLink>
-              <NavLink to='/GiverLanding'>
+              <NavLink to='/seeker'>
                 <Button className='home_SignUpButton' variant='info'>Log In</Button>
               </NavLink>
             </div>
