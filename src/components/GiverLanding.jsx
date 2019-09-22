@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ListGroup, Button } from 'react-bootstrap';
 import Octicon, {iconsByName} from '@primer/octicons-react'
+import { NavLink } from "react-router-dom";
 
 class GiverLanding extends React.Component {
 
@@ -59,12 +60,14 @@ class GiverLanding extends React.Component {
               <p>{this.state.currentJob.snippet}</p>
               <div className='giverLanding_JobButtonWrapper'>
                 <a href={this.state.currentJob.url} target='blank'>
-                  <Button className='giverLanding_JobButton'>
+                  <Button className='giverLanding_JobButton' variant="info">
                     <span>View Full Job </span>
                     <Octicon icon={iconsByName['link-external']}/>
                   </Button>
                 </a>
-                <Button className='giverLanding_JobButton'> Refer for this position</Button>
+                <NavLink to='/ViewCandidates'>
+                  <Button className='giverLanding_JobButton'>Refer for this position</Button>
+                </NavLink>
               </div>
             </div> 
             :

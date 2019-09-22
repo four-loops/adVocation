@@ -47,8 +47,10 @@
   width: 200px;
 }
 
-.candidateList_Shortlist {
-  margin-top: 10px;
+.candidateList_BottomButtonHolder {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
 #giverLanding_Body {
