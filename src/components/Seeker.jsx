@@ -23,11 +23,16 @@ class Seeker extends React.Component {
   }
 
   getJobs() {
-    axios.get('http://3.17.167.107/getJobs') // UPDATE LINK WITH NEW ENDPOINT
+    axios.get('http://3.17.167.107/getSeekerReferals', {
+      params: {
+        seeker_id: 1
+      }
+    })
     .then(({ data }) => {
+      console.log(data)
       this.setState({referredCompanies: data})
     })
-    .catch(error => console.log('ERROR'));
+    .catch(error => console.log('Failed to load jobs'));
   }
 
   renderJob(job) {

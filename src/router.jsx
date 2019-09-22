@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from './components/Home.jsx'
-import ViewCandidates from './components/CandidateList.jsx';
+import Home from './components/home.jsx'
+import ViewCandidates from './components/candidateList.jsx';
 import Seeker from './components/Seeker.jsx';
 import GiverLanding from './components/GiverLanding.jsx';
 import GiverSignUp from './components/GiverSignUp.jsx';

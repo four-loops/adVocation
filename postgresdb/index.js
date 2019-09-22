@@ -80,4 +80,65 @@ const getCompanyFromGiverID = (giver_id, cb) => {
   });
 };
 
-module.exports = { getSeekersByCompanyId, getSeekersByJob, getJobs, createGiver, getCompanyFromGiverID };
+const getJobsByCompanyId = (company_id, cb) => {
+  client.query(`SELECT * FROM jobs WHERE jobs.company_id = ${company_id};`, (err, res) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, res.rows);
+    }
+  });
+};
+
+const getSeekerReferals = (seeker_id, cb) => {
+  client.query(`SELECT DISTINCT job_seekers.job_seeker_id, job_seekers.seeker_name, job_seekers.profile_url, job_seekers.email, 
+  job_seekers.linkedin_url, job_seekers.selling_points, job_seekers.industry, job_seekers.level_of_experience, job_seekers.location, 
+  job_seekers.level_of_experience, job_seekers.location, job_seekers.health_benefits, job_seekers.pto_unlimited, job_seekers.diverse_workplace, 
+  job_seekers.diversity_advocate, job_seekers.size, job_seekers.job_search_location, job_seekers.matching_401k FROM job_seekers INNER JOIN 
+  seeker_job_matches ON job_seekers.job_seeker_id = seeker_job_matches.job_seeker_id INNER JOIN referals ON 
+  seeker_job_matches.id = referals.seeker_job_matches_id AND seeker_job_matches.job_seeker_id = ${seeker_id};`, (err, res) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, res.rows);
+    }
+  });
+};
+
+const createSeeker = (data, cb) => {
+  let sellingString = '';
+  let locationString = '';
+
+  data.selling_points.forEach((point, i) => {
+    if (i === data.selling_points.length - 1) {
+      sellingString += '"' + point + '"';
+    } else {
+      sellingString += '"' + point + '", ';
+    }
+  });
+
+  data.job_search_location.forEach((point, i) => {
+    if (i === data.job_search_location.length - 1) {
+      locationString += '"' + point + '"';
+    } else {
+      locationString += '"' + point + '", ';
+    }
+  });
+
+  client.query(`INSERT INTO job_seekers(seeker_name, profile_url, email, linkedin_url, selling_points, industry, 
+    level_of_experience, location, health_benefits, pto_unlimited, diverse_workplace, diversity_advocate, size, 
+    job_search_location, matching_401k) VALUES('${data.seeker_name}', '${data.profile_url}', '${data.email}', '${data.linkedin_url}', 
+    '{${sellingString}}', '${data.industry}', ${ data.level_of_experience }, '${data.location}', ${ data.health_benefits }, 
+    ${ data.pto_unlimited }, ${ data.diverse_workplace }, ${ data.diversity_advocate }, '${data.size}', '{${locationString}}', 
+    ${ data.matching_401k });`, (err, res) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, 'Post successful');
+    }
+  });
+  cb(null, 'Post successful');
+};
+
+
+module.exports = { getSeekersByCompanyId, getSeekersByJob, getJobs, createGiver, getCompanyFromGiverID, getJobsByCompanyId, getSeekerReferals, createSeeker };
