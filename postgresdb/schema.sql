@@ -37,7 +37,7 @@ CREATE TABLE job_seekers(
 	diverse_workplace BOOLEAN,
 	diversity_advocate BOOLEAN,
 	size VARCHAR (10),
-	job_search_location VARCHAR (20) [],
+	job_search_location TEXT [],
 	matching_401k BOOLEAN,
 	seeker_job_title VARCHAR (50)
 );
