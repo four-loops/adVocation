@@ -1,18 +1,48 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import axios from 'axios';
 import CompanyList from './CompanyList.jsx';
 import Search from './Search.jsx'
-import SeekerProfile from './SeekerProfile.jsx'
+import ViewSeekerProfile from './ViewSeekerProfile.jsx'
 
 class Seeker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: 'Alice',
-      referredCompanies: ['IBM', 'Google', 'Apple'],
+      isExpandedView: false,
+      renderJobView: false,
+      referredCompanies: [],
+      // referredCompanies: ['IBM', 'Google', 'Apple', 'Indeed', 'Amazon', 'Unemployed'],
       pendingCompanies: [],
-      allJobs: ['job1', 'job2', 'job3']
+      currentJob: null
     };
+
+    this.viewMore = this.viewMore.bind(this);
+    this.renderJob = this.renderJob.bind(this);
+  }
+
+  getJobs() {
+    axios.get('http://3.17.167.107/getJobs') // UPDATE LINK WITH NEW ENDPOINT
+    .then(({ data }) => {
+      this.setState({referredCompanies: data})
+    })
+    .catch(error => console.log('ERROR'));
+  }
+
+  renderJob(job) {
+    this.setState({
+      renderJobView: !this.state.renderJobView,
+      currentJob: job
+    })
+  }
+
+  viewMore() {
+    this.setState({isExpandedView: !this.state.isExpandedView})
+  }
+
+  componentDidMount() {
+    this.getJobs();
   }
 
   render() {
@@ -24,13 +54,16 @@ class Seeker extends React.Component {
           </h1>
         </div>
         <CompanyList
+          isExpandedView={this.state.isExpandedView}
+          renderJobView={this.state.renderJobView}
           referredCompanies={this.state.referredCompanies}
           pendingCompanies={this.state.pendingCompanies}
+          currentJob={this.state.currentJob}
+          renderJob={this.renderJob}
+          viewMore={this.viewMore}
         />
-        <Search
-          jobs={this.state.allJobs}
-        />
-        <SeekerProfile />
+        <Search />
+        <ViewSeekerProfile />
       </React.Fragment>
     )
   }

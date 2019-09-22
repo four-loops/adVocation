@@ -1,30 +1,24 @@
+#root {
+  padding: 10px;
+}
+
 .identifier {
   background-color: cadetblue;
   border: 2px solid black;
 }
 
 .candidateList_body {
-  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
 .candidateList_CardDeck {
   padding-top: 20px;
-  /* display: flex;
-  flex-direction: row; */
-  /* white-space: nowrap; */
   overflow: auto;
-  /* width: 1000px; */
   display: grid;
   grid-gap: 300px;
   grid-template-columns: repeat(100, 10px);
   grid-template-rows: minmax(150px, 1fr);
-}
-
-.candidateList_CardDeck::before,
-.candidateList_CardDeck::after {
-  content: ‘’;
 }
 
 .candidateList_Card {
@@ -54,7 +48,6 @@
 }
 
 #giverLanding_Body {
-  padding: 10px;
   padding-top: 0;
   height: 680px;
   display: flex;
@@ -95,4 +88,94 @@
   flex-direction: column;
   height: 100px;
   justify-content: space-between;
+}
+
+#giver_shortlists_body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.referView_Container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.referView_CardHolder {
+  overflow: auto;
+  display: grid;
+  grid-gap: 200px;
+  grid-template-columns: repeat(100, 10px);
+  grid-template-rows: minmax(150px, 1fr);
+  margin-top: 5px;
+}
+
+.referView_Card {
+  width: 200px;
+  min-height: 150px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.referView_all_candidates {
+  width: 200px;
+}
+
+.giver_shortlists_back {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#seeker_jobForm {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.seeker_jobSearch {
+  flex-grow: 1;
+}
+
+.home_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* color: whitesmoke; */
+  /* background-color: #56CC9D; */
+  border-radius: 10px;
+  padding: 10px;
+  border: 3px dashed #56CC9D;
+  padding-top: 20px;
+}
+
+.home_SignUpButtonHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.home_signup_section {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.home_SignUpButton {
+  margin: auto 10px;
+}
+
+.home_content_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+}
+
+.home_motto {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
 }
