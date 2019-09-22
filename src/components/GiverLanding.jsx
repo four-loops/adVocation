@@ -11,7 +11,7 @@ class GiverLanding extends React.Component {
     super(props)
 
     this.state = {
-      giverCompany: 'Shazamazon',
+      giverCompany: 'Microsoft',
       jobs: [
         {job_id: 13213, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
 
@@ -63,13 +63,24 @@ You are passionate about technology, comfortable at the whiteboard as well as th
     })
   }
 
+  // getJobs() {
+  //   axios.get('/getCompanyFromGiverID', {
+  //     params: {
+  //       giver_id: 1
+  //     }
+  //   })
+  //   .then(({ data }) => {
+  //     console.log(data);
+  //   })
+  // }
+  
   componentDidMount() {
   }
 
   render() {
     return(
       <div id='giverLanding_Body'>
-        <h2>Hello, Alice!</h2>
+        <h2>Hello, Friend!</h2>
         <h4>Here are jobs listed at {this.state.giverCompany} that you can refer for:</h4>
         <div className='giverLanding_ListContainer'>
           {
