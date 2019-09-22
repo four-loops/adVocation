@@ -55,6 +55,7 @@ class Home extends Component {
       seeker_see_name: (form.elements.seeker_see_name.value === 'on' ? true : false)
     }
     console.log(formData)
+
   }
 
 

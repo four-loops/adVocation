@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Redirect, NavLink } from "react-router-dom";
 import { Form, Button, Checkbox } from 'react-bootstrap';
 
 
@@ -48,9 +49,11 @@ const GiverSignUp = (props) => {
         <Form.Check type="checkbox" label="Check here if the people who you refer can mention you by name when they follow-up on job leads" />
       </Form.Group>
 
-      <Button variant="primary" type="submit" >
-        Submit
-      </Button>
+      <NavLink to='/GiverLanding'>
+        <Button variant="primary" type="submit" >
+          Submit
+        </Button>
+      </NavLink>
       </Form>
       
     );
