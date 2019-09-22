@@ -42,12 +42,12 @@ class GiverSignUp extends React.Component {
 
     if ( this.state.showForm) {
     return (
-      // <Form onSubmit={(event)=>props.location.props.submitGiverFormData(event)}>
-      <Form onSubmit={this.submitGiverFormData}>
+      <Form onSubmit={(event)=>props.location.props.submitGiverFormData(event)}>
       <h3>Register</h3>
-      {/* <Form.Group controlId="diversityPledge" onChange={()=>props.location.props.handleDiversityCheckboxChange()}>
-        <Form.Check type="checkbox" label="I promise to consciously promote acceptance and demonstrate respect." />
-      </Form.Group> */}
+      <div className='signUp_pledge'>
+        By joining our community, you agree to advocate for building diverse and inclusive communities within your organization 
+        <a href='https://www.ceoaction.com/pledge/ceo-pledge/'>. Code of Conduct</a>
+      </div>
 
       <Form.Group controlId="name">
         <Form.Label>Your Full Name</Form.Label>
@@ -86,8 +86,6 @@ class GiverSignUp extends React.Component {
         <Form.Label>Are you willing to share your name with those you refer?</Form.Label>
         <Form.Check type="checkbox" label="Check here if the people who you refer can mention you by name when they follow-up on job leads" />
       </Form.Group> */}
-
-      <p>By submitting this form, I promise to consciously promote acceptance and demonstrate respect. I am also willing to share my name with those I refer.</p>
 
       {/* <NavLink to='/GiverLanding'> */}
         <Button variant="primary" type="submit">

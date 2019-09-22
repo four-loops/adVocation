@@ -13,14 +13,30 @@ class GiverLanding extends React.Component {
     this.state = {
       giverCompany: 'Shazamazon',
       jobs: [
-        {job_id: 13213, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 13203, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 13123, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 23434, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 14343, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 13423, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 14723, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
-        {job_id: 13783, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
+        {job_id: 13213, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 13203, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 13123, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 23434, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 14343, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 13423, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 14723, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
+        {job_id: 13783, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: ` We are hiring a Software Engineer with experience in designing and delivering software using modern software engineering practices and modern cloud architectures.
+
+You are passionate about technology, comfortable at the whiteboard as well as the keyboard and love collaboration. You will be a member of a team that collaborates with customer engineers to write software on the Microsoft Azure platform.`, url: 'http://www.google.com'},
 
       ],
       renderJobView: false,
@@ -53,7 +69,7 @@ class GiverLanding extends React.Component {
   render() {
     return(
       <div id='giverLanding_Body'>
-        <h2>Hello, Name!</h2>
+        <h2>Hello, Alice!</h2>
         <h4>Here are jobs listed at {this.state.giverCompany} that you can refer for:</h4>
         <div className='giverLanding_ListContainer'>
           {

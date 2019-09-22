@@ -185,3 +185,69 @@
   margin-top: 20px;
   margin-bottom: 80px;
 }
+
+.seeker_Container {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-around;
+}
+
+.seeker_viewEditButton {
+  margin-top: 20px;
+}
+
+.seeker_buttonWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.seekerProfile_buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  justify-content: space-between;
+}
+
+.seekerProfile_button {
+  width: 100%;
+}
+
+.seekerProfile_Container {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-between;
+}
+
+.jobList_availableJobsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-between;
+}
+
+.jobList_searchButton {
+  height: 40px;
+  border-radius: 0 10px 10px 0 !important;
+}
+
+.jobList_searchBar {
+  height: 40px;
+  border-radius: 10px 0 0 10px !important;
+}
+
+.jobList_jobViewContainer {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-between;
+}
+
+.company_askReferral {
+  margin-right: 10px;
+}
+
+.signUp_pledge {
+  margin-bottom: 15px;
+}

@@ -52,11 +52,14 @@ class Seeker extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className='seeker_Container'>
         <div>
-          <h1>
-            Welcome, {this.state.name}!
-          </h1>
+          {
+            this.state.renderJobView ? null :
+            <h1>
+              Welcome, {this.state.name}!
+            </h1>
+          }
         </div>
         <CompanyList
           isExpandedView={this.state.isExpandedView}
@@ -67,9 +70,11 @@ class Seeker extends React.Component {
           renderJob={this.renderJob}
           viewMore={this.viewMore}
         />
-        <Search />
-        <ViewSeekerProfile />
-      </React.Fragment>
+        <div className='seeker_buttonWrapper'>
+          <Search />
+          <ViewSeekerProfile />
+        </div>
+      </div>
     )
   }
 }

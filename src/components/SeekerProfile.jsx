@@ -25,9 +25,9 @@ class SeekerProfile extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div>
+      <div className='seekerProfile_Container'>
           <h1>Profile</h1>
+        <div>
           <img src={this.state.name.profile_url}></img>
           <p>Name: {this.state.name}</p>
           <p>Email: {this.state.email}</p>
@@ -37,11 +37,15 @@ class SeekerProfile extends React.Component {
           <p>Years of Experience: {this.state.level_of_experience}</p>
           <p>Location: {this.state.location}</p>
         </div>
-        <Button>Edit Profile</Button>
-        <NavLink to='/seeker'>
-          <Button>Back</Button>
-        </NavLink>
-      </React.Fragment>
+        <div className='seekerProfile_buttonWrapper'>
+          <NavLink to='/SeekerSignUp'>
+            <Button className='seekerProfile_button'>Edit Profile</Button>
+          </NavLink>
+          <NavLink to='/seeker'>
+            <Button className='seekerProfile_button'>Back</Button>
+          </NavLink>
+        </div>
+      </div>
     );
   }
 };
