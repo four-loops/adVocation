@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+
 
 const GiverSignUp = (props) => {
     return (
@@ -11,7 +12,7 @@ const GiverSignUp = (props) => {
 
       <Form.Group controlId="name">
         <Form.Label>Your Full Name</Form.Label>
-        <Form.Control type="name" placeholder="Firstname Lastname" />
+        <Form.Control type="name" placeholder="Enter name" />
       </Form.Group>
 
       <Form.Group controlId="email">
@@ -49,3 +50,5 @@ const GiverSignUp = (props) => {
       
     );
   };
+
+  export default GiverSignUp;
