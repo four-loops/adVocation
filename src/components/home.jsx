@@ -89,7 +89,7 @@ class Home extends Component {
           </div>
 
           <div className='home_signup_section'>
-            <p>I want to make my workplace more diverse and inclusive through hiring</p>
+            <p>I want to find work at a diverse and inclusive organization</p>
             <div className='home_SignUpButtonHolder'>
               <NavLink to='/SeekerSignUp'>
                 <Button className='home_SignUpButton' variant='info'>Sign Up</Button>

@@ -13,6 +13,7 @@ const Company = (props) => {
         <p>{props.currentJob.country}</p>
         <p>{props.currentJob.hr_contact}</p>
         <p>{props.currentJob.date_posted}</p>
+        <Button className='company_askReferral'>Ask for referral</Button>
         <Button onClick={() => props.renderJob()}>
           Back
         </Button>

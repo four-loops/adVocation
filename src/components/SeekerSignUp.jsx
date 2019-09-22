@@ -44,11 +44,12 @@ class SeekerSignUp extends React.Component {
   render() {
     if ( this.state.showForm) {
       return (
-        <Form onSubmit={this.submitSeekerFormData}>
+      <Form onSubmit={this.submitSeekerFormData}>
       <h3>Register</h3>
-      {/* <Form.Group controlId="diversityPledge">
-        <Form.Check type="checkbox" label="I promise to consciously promote acceptance and demonstrate respect." />
-      </Form.Group> */}
+      <div className='signUp_pledge'>
+        By joining our community, you agree to advocate for building diverse and inclusive communities within your organization 
+        <a href='https://www.ceoaction.com/pledge/ceo-pledge/'>. Code of Conduct</a>
+      </div>
 
       <Form.Group controlId="name">
         <Form.Label>Your Full Name</Form.Label>
@@ -94,7 +95,8 @@ class SeekerSignUp extends React.Component {
         <Form.Control type="level_of_experience" placeholder="Enter City" />
       </Form.Group>
 
-      <p className="text-center"> Please list three accomplishments that will help convince potential referrers to endorse you.</p>
+      <p className="text-center"> Please list three accomplishments that will help convince potential employers to endorse you.</p>
+
       <p className="text-center">You only have 300 characters for each field.</p>
 
       <Form.Group controlId="selling_point_1">
@@ -112,7 +114,6 @@ class SeekerSignUp extends React.Component {
         <Form.Control maxLength="300" type="selling_point_3" placeholder="Third Accomplishment" />
       </Form.Group>
 
-      <p>By submitting this form, I promise to consciously promote acceptance and demonstrate respect.</p>
 
       {/* <NavLink to='/Seeker'> */}
         <Button variant="primary" type="submit">
