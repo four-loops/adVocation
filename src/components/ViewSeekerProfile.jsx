@@ -2,14 +2,14 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 
-const Search = (props) => {
+const ViewSeekerProfile = (props) => {
   return (
-    <NavLink to='/jobs'>
+    <NavLink to='/seekerprofile'>
       <Button variant="primary" size="lg" block>
-        Search Jobs
+        View/Edit Profile
       </Button>
     </NavLink>
   );
 };
 
-export default Search;
+export default ViewSeekerProfile;
