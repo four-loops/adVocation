@@ -10,9 +10,9 @@ class GiverShortLists extends React.Component {
 
     this.state = {
       candidates: [
-        ['Front End Developer', {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'} , {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}],
-        ['Full Stack Developer', {seeker_name: 'Amelia Earhart', seeker_job_title: 'Pilot'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'} , {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}], 
-        ['Designer', {seeker_name: 'Oscar Grouch', seeker_job_title: 'Waste Management Professional'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'} , {seeker_name: 'Async Await', seeker_job_title: 'Coffee Runner'}]
+        ['Front End Developer', {seeker_name: 'Edmund Velazquez', seeker_job_title: 'Waiter'}, {seeker_name: 'Marcia Ware', seeker_job_title: 'Advertising Copywriter'}, {seeker_name: 'Lori Dean', seeker_job_title: 'Animator'}, {seeker_name: 'Dominique Ortega', seeker_job_title: 'Hair Stylist'}, {seeker_name: 'Sung Malone', seeker_job_title: 'Park Ranger'} , {seeker_name: 'Gretchen Park', seeker_job_title: 'Private Detective'}],
+        ['Full Stack Developer', {seeker_name: 'Amelia Earhart', seeker_job_title: 'Pilot'}, {seeker_name: 'Millie Zamora', seeker_job_title: 'Coffee Runner'}, {seeker_name: 'Jody Sparks', seeker_job_title: 'Nutritionist'}, {seeker_name: 'Erick Rasmussen', seeker_job_title: 'Meteorologist'}, {seeker_name: 'Bettye Flores', seeker_job_title: 'Music Therapist'} , {seeker_name: 'Dwain Navarro', seeker_job_title: 'Columnist'}], 
+        ['Designer', {seeker_name: 'Oscar Grouch', seeker_job_title: 'Waste Management Professional'}, {seeker_name: 'Fay Li', seeker_job_title: 'Organic Farm Manager'}, {seeker_name: 'Bernie Chen', seeker_job_title: 'Pastry Chef'}, {seeker_name: 'Tina Wise', seeker_job_title: 'City Planner'}, {seeker_name: 'Vince Pace', seeker_job_title: 'Dance Instructor'} , {seeker_name: 'Emil Douglas', seeker_job_title: 'Teacher'}]
       ]
     }
   }
@@ -50,7 +50,7 @@ const ReferView = (props) => {
           props.candidateList.slice(1).map(candidate => {
             return(
               <Card className={'referView_Card'}>
-                <Card.Body>
+                <Card.Body className='referView_CardBody'>
                   <Card.Title>{candidate.seeker_name}</Card.Title>
                   <Card.Text>{candidate.seeker_job_title}</Card.Text>
                   <Button>Refer</Button>

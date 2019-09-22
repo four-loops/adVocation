@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Card, Button } from 'react-bootstrap';
 import Octicon, {iconsByName} from '@primer/octicons-react'
 import { NavLink } from "react-router-dom";
+import axios from 'axios';
 
 class ViewCandidates extends React.Component {
 
@@ -10,15 +11,32 @@ class ViewCandidates extends React.Component {
     super(props)
 
     this.state = {
-      candidates: [1, 2, 3, 4, 5, 6, 7, 8, 9, ],
+      candidates: [],
       shortList: []
     }
+    
+    this.getJobs = this.getJobs.bind(this);
 
   }
 
+  getJobs() {
+    axios.get('http://3.17.167.107/getCandidates', {
+      params: {
+        company_id: 1
+      }
+    })
+    .then(({ data }) => {
+      console.log(data)
+      this.setState({candidates: data})
+    })
+    .catch(error => console.log(error))
+  }
+  
+  componentDidMount() {
+    this.getJobs();
+  }
 
   render() {
-    console.log(this.state.candidates)
     return(
       <div className='candidateList_body'>
         <h1>Candidates</h1>
@@ -28,10 +46,13 @@ class ViewCandidates extends React.Component {
               return (
                 <Card className='candidateList_Card'>
                   <Card.Body>
-                    <Card.Title>Card title</Card.Title>
+                    <Card.Title>{candidate.seeker_name}</Card.Title>
                     <Card.Text className='candidateList_CardBody'>
-                      This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.
+                        {candidate.selling_points.map((point) => {
+                          return (
+                            <p>{point}</p>
+                          );
+                        })}
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
