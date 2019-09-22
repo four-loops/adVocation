@@ -23,24 +23,6 @@ function RouteManager() {
         <Route path="/jobs" component={JobList} />
         <Route path='/GiverShortLists' component={GiverShortLists} />
         <Route path="/seekerprofile" component={SeekerProfile} />
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/ViewCandidates">ViewCandidates</Link>
-          </li>
-          <li>
-            <Link to="/Seeker">Seeker Home</Link>
-          </li>
-          <li>
-            <Link to="/GiverLanding">Giver Landing</Link>
-            <Link to="/GiverSignUp">Giver Sign Up Form</Link>
-          </li>
-          <li>
-            <Link to="/SeekerSignUp">Seeker Sign Up Form</Link>
-          </li>
-        </ul>
       </div>
     </Router>
   );
