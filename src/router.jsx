@@ -7,6 +7,7 @@ import GiverLanding from './components/GiverLanding.jsx';
 import GiverSignUp from './components/GiverSignUp.jsx';
 import SeekerSignUp from './components/SeekerSignUp.jsx';
 import JobList from './components/JobList.jsx';
+import SeekerProfile from "./components/SeekerProfile.jsx";
 
 function RouteManager() {
   return (
@@ -19,6 +20,7 @@ function RouteManager() {
         <Route path="/SeekerSignUp" component={SeekerSignUp} />
         <Route path="/seeker" component={Seeker} />
         <Route path="/jobs" component={JobList} />
+        <Route path="/seekerprofile" component={SeekerProfile} />
         <ul>
           <li>
             <Link to="/">Home</Link>
