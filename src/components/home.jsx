@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Redirect, NavLink } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Jumbotron, Alert } from 'react-bootstrap';
 
+const UserContext = React.createContext('user');
 
 class Home extends Component {
   constructor(props) {
