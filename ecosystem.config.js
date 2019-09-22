@@ -11,7 +11,7 @@ module.exports = {
         ref: 'origin/master',
         repo: 'https://github.com/four-loops/adVocation.git',
         path: '/home/ubuntu/adVocation',
-        'post-deploy': 'npm install && mv ~/home/ubuntu/adVocation/bootstrap-theme.min.css ~/home/ubuntu/adVocation/node_modules/bootstrap/dist/css && npm run compile && pm2 startOrRestart ecosystem.config.js'
+        'post-deploy': 'npm install && mv /home/ubuntu/adVocation/current/bootstrap-theme.min.css /home/ubuntu/adVocation/current/node_modules/bootstrap/dist/css && npm run compile && pm2 startOrRestart ecosystem.config.js'
       }
     }
   }
