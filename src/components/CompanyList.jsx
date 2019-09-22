@@ -6,7 +6,11 @@ import Company from './Company.jsx'
 const CompanyList = (props) => {
   return (
     <Jumbotron>
-      <h3>Here's where you've been referred!</h3>
+      {
+        props.currentJob ? null :
+        <h3>Here's where you've been referred!</h3>
+
+      }
       {props.currentJob ? (
         <Company
           renderJobView={props.renderJobView}

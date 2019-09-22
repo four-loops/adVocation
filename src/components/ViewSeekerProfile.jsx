@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 const ViewSeekerProfile = (props) => {
   return (
     <NavLink to='/seekerprofile'>
-      <Button variant="primary" size="lg" block>
+      <Button variant="primary" size="lg" block className='seeker_viewEditButton'>
         View/Edit Profile
       </Button>
     </NavLink>

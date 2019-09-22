@@ -41,7 +41,6 @@ class JobList extends React.Component {
   getJobs() {
     axios.get('http://3.17.167.107/getJobs')
     .then(({ data }) => {
-      console.log(data);
       this.setState({jobs: data})
     })
     .catch(error => console.log('ERROR'));
@@ -57,7 +56,7 @@ class JobList extends React.Component {
   render() {
     return (
       this.state.renderJobView ? (
-        <div>
+        <div className='jobList_jobViewContainer'>
           <h2>{this.state.currentJob.title}</h2>
           <p>{this.state.currentJob.company_name}</p>
           <p>{this.state.currentJob.full_description}</p>
@@ -71,13 +70,13 @@ class JobList extends React.Component {
           </Button>
         </div>
       ) : (
-        <React.Fragment>
-          <h3>Available Jobs</h3>
+        <div className='jobList_availableJobsContainer'>
+          <h1>Available Jobs</h1>
           <Form id="seeker_jobForm">
             <Form.Group controlId="formSearch" className="seeker_jobSearch">
-              <Form.Control type="text" placeholder="Search"></Form.Control>
+              <Form.Control type="text" placeholder="Search" className='jobList_searchBar'></Form.Control>
             </Form.Group>
-            <Button variant="primary" type="submit">Search</Button>
+            <Button variant="primary" type="submit" className='jobList_searchButton'>Search</Button>
           </Form>
           <ListGroup>
             {this.state.jobs.map((job) => {
@@ -93,7 +92,7 @@ class JobList extends React.Component {
           <NavLink to='/seeker'>
             <Button>Back</Button> 
           </NavLink>
-        </React.Fragment>
+        </div>
       )
     );
   }

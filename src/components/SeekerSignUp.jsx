@@ -6,9 +6,10 @@ const SeekerSignUp = (props) => {
     return (
       <Form>
       
-      <Form.Group controlId="diversityPledge">
-        <Form.Check type="checkbox" label="I promise to consciously promote acceptance and demonstrate respect." />
-      </Form.Group>
+      <div className='signUp_pledge'>
+        By joining our community, you agree to advocate for building diverse and inclusive communities within your organization 
+        <a href='https://www.ceoaction.com/pledge/ceo-pledge/'>. Code of Conduct</a>
+      </div>
 
       <Form.Group controlId="name">
         <Form.Label>Your Full Name</Form.Label>
@@ -54,7 +55,7 @@ const SeekerSignUp = (props) => {
         <Form.Control type="level_of_experience" placeholder="Enter City" />
       </Form.Group>
 
-      <p className="text-center">Craft three selling points that help will convince potential referrers to endorse you.</p>
+      <p className="text-center">Craft three accomplishments that help will convince employers to endorse you.</p>
       <p className="text-center">You only have 300 characters for each field.</p>
 
       <Form.Group controlId="selling_point_1">

@@ -7,9 +7,10 @@ const GiverSignUp = (props) => {
     return (
       <Form onSubmit={(event)=>props.location.props.submitGiverFormData(event)}>
       
-      <Form.Group controlId="diversityPledge" onChange={()=>props.location.props.handleDiversityCheckboxChange()}>
-        <Form.Check type="checkbox" label="I promise to consciously promote acceptance and demonstrate respect." />
-      </Form.Group>
+      <div className='signUp_pledge'>
+        By joining our community, you agree to advocate for building diverse and inclusive communities within your organization 
+        <a href='https://www.ceoaction.com/pledge/ceo-pledge/'>. Code of Conduct</a>
+      </div>
 
       <Form.Group controlId="name">
         <Form.Label>Your Full Name</Form.Label>
