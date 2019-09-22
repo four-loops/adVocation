@@ -17,7 +17,7 @@ const getSeekersByCompanyId = (company_id, cb) => {
   client.query(
     `SELECT DISTINCT job_seekers.job_seeker_id, job_seekers.seeker_name, job_seekers.profile_url, job_seekers.email, 
     job_seekers.linkedin_url, job_seekers.selling_points, job_seekers.industry, job_seekers.level_of_experience, 
-    job_seekers.location, job_seekers.level_of_experience, job_seekers.location, job_seekers.health_benifits, 
+    job_seekers.location, job_seekers.level_of_experience, job_seekers.location, job_seekers.health_benefits, 
     job_seekers.pto_unlimited, job_seekers.diverse_workplace, job_seekers.diversity_advocate, job_seekers.size, 
     job_seekers.job_search_location, job_seekers.matching_401k, jobs.job_id, jobs.title, jobs.city, jobs.state_abrev, 
     jobs.country, jobs.source, jobs.date_posted, jobs.posting_url, jobs.short_description, jobs.full_description, 
@@ -52,5 +52,32 @@ const getJobs = (cb) => {
   });
 };
 
+const createGiver = (data, cb) => {
+  client.query(`INSERT INTO companies(company_name, hr_contact) VALUES('${data.company_name}', '${data.hr_contact}') ON CONFLICT DO NOTHING;`, (err, res) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      client.query(`INSERT INTO job_givers(giver_name, profile_url, email, company_id, seeker_see_name) 
+      VALUES('${data.name}', '${data.linkedin_url}', '${data.email}', 3, '${data.seeker_see_name}');`, (err, res) => {
+        if (err) {
+          cb(err, null);
+        } else {
+          cb(null, 'Post successful');
+        }
+      });
+      cb(null, 'Post successful');
+    }
+  });
+};
 
-module.exports = { getSeekersByCompanyId, getSeekersByJob, getJobs };
+const getCompanyFromGiverID = (giver_id, cb) => {
+  client.query(`SELECT companies.company_id FROM companies INNER JOIN job_givers ON job_givers.company_id = companies.company_id AND job_givers.job_giver_id = ${giver_id};`, (err, res) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, res.rows); 
+    }
+  });
+};
+
+module.exports = { getSeekersByCompanyId, getSeekersByJob, getJobs, createGiver, getCompanyFromGiverID };
