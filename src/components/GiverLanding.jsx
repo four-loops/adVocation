@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { ListGroup, Button } from 'react-bootstrap';
 import Octicon, {iconsByName} from '@primer/octicons-react'
 import { NavLink } from "react-router-dom";
+import axios from 'axios';
 
 class GiverLanding extends React.Component {
 
@@ -10,7 +11,7 @@ class GiverLanding extends React.Component {
     super(props)
 
     this.state = {
-      giverCompany: 'Galvanize',
+      giverCompany: 'Shazamazon',
       jobs: [
         {job_id: 13213, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
         {job_id: 13203, company_id: 'Galvanize', title: 'Software Engineer', city: 'Austin', 'state': 'TX', snippet: 'Lorem ipsum dolor sit amet', url: 'http://www.google.com'},
@@ -44,6 +45,9 @@ class GiverLanding extends React.Component {
       renderJobView: !this.state.renderJobView,
       currentJob: job
     })
+  }
+
+  componentDidMount() {
   }
 
   render() {

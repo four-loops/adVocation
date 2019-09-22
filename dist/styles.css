@@ -120,6 +120,12 @@
   justify-content: space-between;
 }
 
+.referView_CardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .referView_all_candidates {
   width: 200px;
 }
