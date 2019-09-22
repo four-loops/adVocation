@@ -61,17 +61,15 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <Jumbotron>
-        <h1 className="display-4" className="text-center">adVocation</h1>
-        <hr className="my-4"/>
-        <p className="text-center">Help make your worplace more diverse and inclusive by expanding hiring pools!</p>
-        <p className="lead">
-        </p>
-        </Jumbotron>
-        <Container>
-          <Row>
-            <Col>
+      <div className='home_content_container'>
+
+        <div className='home_Container'>
+
+          <h1>adVocation</h1>
+          <span className='home_motto'>Creating more diverse workplaces through inclusive hiring</span>
+          <div className='home_signup_section'>
+            <p>I want to make my workplace more diverse and inclusive through hiring</p>
+            <div className='home_SignUpButtonHolder'>
               <NavLink to={{
                 pathname: '/GiverSignUp',
                 props: {
@@ -80,39 +78,24 @@ class Home extends Component {
                   handleEmailShareCheckboxChange: this.handleEmailShareCheckboxChange
                 }
               }}>
-              <Button variant="outline-light">
-              <Card bg="success" text="white" >
-              <Card.Header><p text="white" className="text-center">I want to promote diversity at my company!</p></Card.Header>
-                <Card.Body>
-                  <Card.Title></Card.Title>
-                  <Card.Text>sign up</Card.Text>
-                  <Card.Text></Card.Text>
-                </Card.Body>
-              </Card>
-              </Button>
+                <Button className='home_SignUpButton'>Sign Up</Button>
               </NavLink>
-            </Col>
-            <Col>
+              <Button className='home_SignUpButton'>Log In</Button>
+            </div>
+          </div>
+
+          <div className='home_signup_section'>
+            <p>I want to make my workplace more diverse and inclusive through hiring</p>
+            <div className='home_SignUpButtonHolder'>
               <NavLink to='/SeekerSignUp'>
-              <Button variant="outline-light">
-              <Card bg="info" text="white" >
-              <Card.Header><p text="white" className="text-center">I'd like a job at a company that values inclusion!</p></Card.Header>
-                <Card.Body>
-                  <Card.Title></Card.Title>
-                  <Card.Text>sign up</Card.Text>
-                  <Card.Text>
-                </Card.Text>
-                </Card.Body>
-              </Card>
-              </Button>
+                <Button className='home_SignUpButton' variant='info'>Sign Up</Button>
               </NavLink>
-            </Col>
-          </Row>
-          <Row>
-            <Col>already a user? job referrers log in here</Col>
-            <Col>already a user? job seekers log in here</Col>
-          </Row>
-        </Container>
+              <NavLink to='/GiverLanding'>
+                <Button className='home_SignUpButton' variant='info'>Log In</Button>
+              </NavLink>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
