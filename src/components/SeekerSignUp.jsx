@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { BrowserRouter as Redirect, NavLink } from "react-router-dom";
 
 const SeekerSignUp = (props) => {
     return (
@@ -71,9 +72,11 @@ const SeekerSignUp = (props) => {
         <Form.Control maxLength="300" type="selling_point_3" placeholder="Third Selling Point" />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <NavLink to='/Seeker'>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </NavLink>
       </Form>
       
     );
