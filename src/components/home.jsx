@@ -45,7 +45,7 @@ class Home extends Component {
   submitGiverFormData(event){
     event.preventDefault();
     let form = event.target
-    this.verifyPledgeAgreement();
+    // this.verifyPledgeAgreement();
     let formData = {
       name: form.elements.name.value,
       email: form.elements.email.value,
