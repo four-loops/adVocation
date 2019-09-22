@@ -14,7 +14,6 @@ function RouteManager() {
       <div>
         <Route exact path="/" component={Home} />
         <Route path="/ViewCandidates" component={ViewCandidates} />
-        <Route path="/Seeker" component={Seeker} />
         <Route path="/GiverLanding" component={GiverLanding} />
         <Route path="/GiverSignUp" component={GiverSignUp} />
         <Route path="/SeekerSignUp" component={SeekerSignUp} />
