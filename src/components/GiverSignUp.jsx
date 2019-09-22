@@ -4,7 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 
 const GiverSignUp = (props) => {
     return (
-      <Form>
+      <Form onSubmit={(event)=>props.location.props.submitGiverFormData(event)}>
       
       <Form.Group controlId="diversityPledge">
         <Form.Check type="checkbox" label="I promise to consciously promote acceptance and demonstrate respect." />
@@ -43,7 +43,7 @@ const GiverSignUp = (props) => {
         <Form.Check type="checkbox" label="Check here if the people who you refer can mention you by name when they follow-up on job leads" />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" >
         Submit
       </Button>
       </Form>

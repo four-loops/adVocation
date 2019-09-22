@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Redirect, NavLink} from "react-router-dom";
-import { Container, Row, Col, Card, Button, Jumbotron } from 'react-bootstrap';
+import { BrowserRouter as Redirect, NavLink } from "react-router-dom";
+import { Container, Row, Col, Card, Button, Jumbotron, Alert } from 'react-bootstrap';
 import GiverSignUp from './GiverSignUp.jsx';
 
 
@@ -8,8 +8,39 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      pledge: true
     }; 
+    this.submitGiverFormData = this.submitGiverFormData.bind(this);
   }
+
+  verifyPledgeAgreement(){
+    if (this.state.pledge === false) {
+      
+
+    }
+  }
+
+  submitGiverFormData(event){
+    event.preventDefault();
+    let form = event.target
+    if (form.elements.diversityPledge.value === 'off') {
+      this.setState({
+        pledge: false
+      })
+    }
+    this.verifyPledgeAgreement();
+    let formData = {
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      password: form.elements.password.value,
+      linkedin_url: form.elements.linkedin_url.value,
+      hr_contact: form.elements.hr_contact.value,
+      seeker_see_name: (form.elements.seeker_see_name.value === 'on' ? true : false)
+    }
+    console.log(formData)
+  }
+
+
 
   render() {
     return (
@@ -24,7 +55,12 @@ class Home extends Component {
         <Container>
           <Row>
             <Col>
-              <NavLink to='/GiverSignUp'>
+              <NavLink to={{
+                pathname: '/GiverSignUp',
+                props: {
+                  submitGiverFormData: this.submitGiverFormData,
+                }
+              }}>
               <Button variant="outline-light">
               <Card bg="success" text="white" >
               <Card.Header><p text="white" className="text-center">I want to promote diversity at my company!</p></Card.Header>
@@ -57,7 +93,6 @@ class Home extends Component {
             <Col>already a user? job referrers log in here</Col>
             <Col>already a user? job seekers log in here</Col>
           </Row>
-
         </Container>
       </div>
     )
