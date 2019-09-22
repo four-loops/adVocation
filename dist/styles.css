@@ -47,8 +47,54 @@
   width: 200px;
 }
 
-.candidateList_Shortlist {
-  margin-top: 10px;
+.candidateList_BottomButtonHolder {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#giverLanding_Body {
+  padding: 10px;
+  padding-top: 0;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.giverLanding_ListContainer {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.giverLanding_ButtonHolder {
+  display: flex;
+  flex-direction: row;
+}
+
+.giverLanding_Button {
+  margin: 10px auto;
+  width: 150px;
+}
+
+#giverLanding_JobView {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px dashed cadetblue;
+  padding: 10px;
+}
+
+.giverLanding_JobButton {
+  width: 100%;
+}
+
+.giverLanding_JobButtonWrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
 }
 
 #seeker_jobForm {
