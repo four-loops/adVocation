@@ -11,19 +11,19 @@ class JobList extends React.Component {
       jobs: [],
       renderJobView: false,
       currentJob: {
-        city: '',
-        company_id: null,
-        company_name: '',
-        country: '',
-        date_posted: '',
-        full_description: '',
-        hr_contact: '',
-        job_id: null,
-        posting_url: '',
-        short_description: '',
-        source: '',
-        state_abrev: '',
-        title: ''
+        // city: '',
+        // company_id: null,
+        // company_name: '',
+        // country: '',
+        // date_posted: '',
+        // full_description: '',
+        // hr_contact: '',
+        // job_id: null,
+        // posting_url: '',
+        // short_description: '',
+        // source: '',
+        // state_abrev: '',
+        // title: ''
       }
     };
 
@@ -57,7 +57,7 @@ class JobList extends React.Component {
   render() {
     return (
       this.state.renderJobView ? (
-        <div id='giverLanding_JobView'>
+        <div>
           <h2>{this.state.currentJob.title}</h2>
           <p>{this.state.currentJob.company_name}</p>
           <p>{this.state.currentJob.full_description}</p>
@@ -66,6 +66,9 @@ class JobList extends React.Component {
           <p>{this.state.currentJob.country}</p>
           <p>{this.state.currentJob.hr_contact}</p>
           <p>{this.state.currentJob.date_posted}</p>
+          <Button onClick={() => this.renderJob()}>
+            Back to Job List
+          </Button>
         </div>
       ) : (
         <React.Fragment>
