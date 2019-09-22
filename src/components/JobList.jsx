@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import { ListGroup, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-import queryString from 'query-string'
 import AvailableJob from './AvailableJob.jsx';
 
 class JobList extends React.Component {
